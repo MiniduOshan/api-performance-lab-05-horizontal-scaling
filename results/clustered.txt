@@ -1,0 +1,70 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: load-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 40s max duration (incl. graceful stop):
+              * default: 200 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 200/200 VUs, 12140 complete and 0 interrupted iterations
+default   [  10% ] 200 VUs  01.0s/10s
+
+running (02.0s), 200/200 VUs, 29012 complete and 0 interrupted iterations
+default   [  20% ] 200 VUs  02.0s/10s
+
+running (03.0s), 200/200 VUs, 47225 complete and 0 interrupted iterations
+default   [  30% ] 200 VUs  03.0s/10s
+
+running (04.0s), 200/200 VUs, 65537 complete and 0 interrupted iterations
+default   [  40% ] 200 VUs  04.0s/10s
+
+running (05.0s), 200/200 VUs, 85281 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  05.0s/10s
+
+running (06.0s), 200/200 VUs, 109293 complete and 0 interrupted iterations
+default   [  60% ] 200 VUs  06.0s/10s
+
+running (07.0s), 200/200 VUs, 134542 complete and 0 interrupted iterations
+default   [  70% ] 200 VUs  07.0s/10s
+
+running (08.0s), 200/200 VUs, 159928 complete and 0 interrupted iterations
+default   [  80% ] 200 VUs  08.0s/10s
+
+running (09.0s), 200/200 VUs, 183946 complete and 0 interrupted iterations
+default   [  90% ] 200 VUs  09.0s/10s
+
+running (10.0s), 200/200 VUs, 209323 complete and 0 interrupted iterations
+default   [ 100% ] 200 VUs  10.0s/10s
+
+
+  █ TOTAL RESULTS 
+
+    HTTP
+    http_req_duration..............: avg=8.47ms min=0s med=4.53ms max=506.77ms p(90)=16.51ms p(95)=27.35ms
+      { expected_response:true }...: avg=8.47ms min=0s med=4.53ms max=506.77ms p(90)=16.51ms p(95)=27.35ms
+    http_req_failed................: 0.00%  0 out of 210496
+    http_reqs......................: 210496 21032.272983/s
+
+    EXECUTION
+    iteration_duration.............: avg=9.34ms min=0s med=4.71ms max=506.77ms p(90)=18.9ms  p(95)=33.19ms
+    iterations.....................: 210496 21032.272983/s
+    vus............................: 200    min=200         max=200
+    vus_max........................: 200    min=200         max=200
+
+    NETWORK
+    data_received..................: 60 MB  6.0 MB/s
+    data_sent......................: 16 MB  1.6 MB/s
+
+
+
+
+running (10.0s), 000/200 VUs, 210496 complete and 0 interrupted iterations
+default ✓ [ 100% ] 200 VUs  10s
